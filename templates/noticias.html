@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{{super()}}
+{% block title %} Lista de Eventos {% endblock %}
+{% block content %}
+
+{% if api_news %}
+<h1>Notícias sobre o Nosso Mundo Hoje.</h1>
+{% for notice in api_news %}
+<hr />
+<h3>{{notice.title}}</h3>
+{% if notice.urlImage %}
+<img src='{{notice.urlImage}}' width="100px" height="60px">
+{% endif %}
+<br/><a href='{{notice.link}}'><b>link para o acesso</b></a>
+<p><b>autor: {{notice.autor}} <br /> feito em <i>{{notice.date}} {{notice.hora}}</i></b></p>
+<p>{{notice.content}}</p>
+{% endfor %}
+{%endif%}
+
+{% block footer %}
+{{super()}}
+{% endblock %}
+{% endblock %}

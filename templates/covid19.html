@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{{super()}}
+{% block title %} api Scorpius {% endblock %}
+    {% block content %}
+    
+    
+<div class="alert alert-info">
+  <strong>Info!</strong> astronomia é ciência, e ser cientísta é ter consciência e saúde!
+  <p>Se previna, <b>#FiqueEmcasa</b></p>
+
+<div class="alert alert-warning">
+  <strong>Info!</strong> A página pode demorar no primeiro carregamento, por conta do processamento dos dados e gráficos presentes,.
+</div>
+</div>
+    <h3>Dados da covid-19 em Petrolina</h3>
+    <div class='well' text-align='center'>
+    <img src='static/dados/semana.png' width='90%'>
+    <br />
+    <!--img src='static/dados/semana.png' width="90%">
+    <br /-->
+    <img src='static/dados/casos.png' width="90%">
+    <br />
+    <img src='static/dados/modeling.png' width='90%'>
+    </div>
+    <div id="footer">
+      {%block footer%}
+      {{super()}}
+      {%endblock%}
+      {%endblock%}
